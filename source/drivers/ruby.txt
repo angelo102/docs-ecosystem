@@ -13,8 +13,7 @@ using Ruby with MongoDB. To skip to more detailed
 discussion see:
 
 - :ref:`ruby-driver-tutorial`
-
-- :ref:`mongodb-data-modeling-and-rails`
+- :ref:`ruby-bson-tutorial`
 
 For a list of external resources, see :ref:`ruby-external-resources`.
 
@@ -26,6 +25,10 @@ MongoDB. It's written in pure Ruby and is optimized for simplicity.
 It can be used on its own, but it also serves as the basis of several
 object mapping libraries, such as `Mongoid <http://mongoid.org/>`_.
 
+Resources:
+
+- `Ruby Driver Source Code <https://github.com/mongodb/mongo-ruby-driver>`_
+
 BSON
 ----
 
@@ -34,64 +37,7 @@ Java extensions for speed depending on the runtime enviroment.
 
 Resources:
 
-- `Documentation <http://api.mongodb.org/ruby/current/index.html>`_
-
-- `Driver Source Code <https://github.com/mongodb/mongo-ruby-driver>`_
-
 - `BSON Source Code <https://github.com/mongodb/bson-ruby>`_
-
-Install / Upgrade
-~~~~~~~~~~~~~~~~~
-
-The Ruby driver is hosted at `Rubygems.org <http://rubygems.org/>`_.
-Before installing the driver, make sure you're using the latest version
-of rubygems:
-
-.. code-block:: sh
-
-   gem update --system
-
-Then install the gems:
-
-.. code-block:: sh
-
-   gem install mongo
-
-To stay on the bleeding edge, you can use the latest source from GitHub.
-Using your Gemfile:
-
-.. code-block:: sh
-
-   gem 'mongo', :git => 'git://github.com/mongodb/mongo-ruby-driver.git'
-
-Or Manually:
-
-.. code-block:: sh
-
-   git clone git://github.com/mongodb/mongo-ruby-driver.git
-   cd mongo-ruby-driver/
-   gem build bson.gemspec; gem install bson-x.x.x.gem
-   gem build bson_ext.gemspec; gem install bson_ext-x.x.x.gem
-   gem build mongo.gemspec; gem install mongo-x.x.x.gem
-
-BSON
-~~~~
-
-In versions of the Ruby driver prior to 0.20, the code for serializing
-to BSON existed in the ``mongo`` gem. Now, all BSON serialization is handled
-by the required ``bson`` gem.
-
-.. code-block:: sh
-
-   gem install bson
-
-If you are running on Windows, you need the
-`Ruby DevKit <https://github.com/oneclick/rubyinstaller/wiki/development-kit>`_
-installed in order to compile the C extensions.
-
-To learn more about the Ruby driver, see the
-`Ruby Tutorial <https://github.com/mongodb/mongo-ruby-driver/wiki/Tutorial>`_ and
-`Ruby Documentation <http://api.mongodb.org/ruby/current/index.html>`_.
 
 Object Mappers
 --------------
